@@ -14,6 +14,9 @@
     <CudaCompile Include="basic\AddVec.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CudaCompile>
+    <CudaCompile Include="basic\AddVectorTime.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CudaCompile>
     <CudaCompile Include="basic\CudaMalloc.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CudaCompile>
@@ -26,6 +29,13 @@
     <CudaCompile Include="basic\DeviceMemory2.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="basic\DS_timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="basic\DS_definitions.h" />
+    <ClInclude Include="basic\DS_timer.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B06B8A4B-84D8-7328-CA3D-D67CE6A60A8C}</ProjectGuid>
