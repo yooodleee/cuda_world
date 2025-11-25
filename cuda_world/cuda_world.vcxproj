@@ -35,13 +35,19 @@
     <CudaCompile Include="thread\SetThreadLayout.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CudaCompile>
+    <CudaCompile Include="thread\VecAddLarge.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CudaCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="basic\DS_timer.cpp" />
+    <ClCompile Include="thread\DS_timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basic\DS_definitions.h" />
     <ClInclude Include="basic\DS_timer.h" />
+    <ClInclude Include="thread\DS_definitions.h" />
+    <ClInclude Include="thread\DS_timer.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B06B8A4B-84D8-7328-CA3D-D67CE6A60A8C}</ProjectGuid>
