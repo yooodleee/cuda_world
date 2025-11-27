@@ -32,6 +32,7 @@
     <CudaCompile Include="thread\MatAdd2DIndex.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CudaCompile>
+    <CudaCompile Include="thread\MatAddLargeMatrix.cu" />
     <CudaCompile Include="thread\ModifiedAddVector.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CudaCompile>
@@ -44,7 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="basic\DS_timer.cpp" />
-    <ClCompile Include="thread\DS_timer.cpp" />
+    <ClCompile Include="thread\DS_timer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="thread\main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basic\DS_definitions.h" />
@@ -52,6 +58,7 @@
     <ClInclude Include="common\CUDA_definitions.cuh" />
     <ClInclude Include="thread\DS_definitions.h" />
     <ClInclude Include="thread\DS_timer.h" />
+    <ClInclude Include="thread\MatAddLargeMatrix.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B06B8A4B-84D8-7328-CA3D-D67CE6A60A8C}</ProjectGuid>
