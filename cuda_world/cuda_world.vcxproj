@@ -32,6 +32,9 @@
     <CudaCompile Include="device_query\DeviceQuery.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CudaCompile>
+    <CudaCompile Include="memory_access\MatMulMemAccessPattern.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CudaCompile>
     <CudaCompile Include="shared_memory\MatMulSharedMemory.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CudaCompile>
@@ -60,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="basic\DS_timer.cpp" />
+    <ClCompile Include="memory_access\DS_timer.cpp" />
     <ClCompile Include="shared_memory\DS_timer.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -76,6 +80,8 @@
     <ClInclude Include="common\CUDA_definitions.cuh" />
     <ClInclude Include="device_query\helper_cuda.h" />
     <ClInclude Include="device_query\helper_string.h" />
+    <ClInclude Include="memory_access\DS_definitions.h" />
+    <ClInclude Include="memory_access\DS_timer.h" />
     <ClInclude Include="shared_memory\DS_definitions.h" />
     <ClInclude Include="shared_memory\DS_timer.h" />
     <ClInclude Include="thread\DS_definitions.h" />
