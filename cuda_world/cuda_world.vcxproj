@@ -47,6 +47,9 @@
     <CudaCompile Include="sync\atomic_operation\threadCounting.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CudaCompile>
+    <CudaCompile Include="sync\multi_stream\MultiStream.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CudaCompile>
     <CudaCompile Include="sync\syncwarp.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CudaCompile>
@@ -77,6 +80,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="sync\atomic_operation\DS_timer.cpp" />
+    <ClCompile Include="sync\multi_stream\DS_timer.cpp" />
     <ClCompile Include="thread\DS_timer.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -96,6 +100,8 @@
     <ClInclude Include="shared_memory\DS_timer.h" />
     <ClInclude Include="sync\atomic_operation\DS_definitions.h" />
     <ClInclude Include="sync\atomic_operation\DS_timer.h" />
+    <ClInclude Include="sync\multi_stream\DS_definitions.h" />
+    <ClInclude Include="sync\multi_stream\DS_timer.h" />
     <ClInclude Include="thread\DS_definitions.h" />
     <ClInclude Include="thread\DS_timer.h" />
     <ClInclude Include="thread\MatAddLargeMatrix.h" />
