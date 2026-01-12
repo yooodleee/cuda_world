@@ -50,6 +50,10 @@
     <CudaCompile Include="sync\cuda_event\CudaEvent.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CudaCompile>
+    <CudaCompile Include="sync\heterogeneous_computing\DeviceCode.cu" />
+    <CudaCompile Include="sync\multi_gpu\MultiGPU.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CudaCompile>
     <CudaCompile Include="sync\multi_stream\MultiStream.cu">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CudaCompile>
@@ -84,6 +88,9 @@
     </ClCompile>
     <ClCompile Include="sync\atomic_operation\DS_timer.cpp" />
     <ClCompile Include="sync\cuda_event\DS_timer.cpp" />
+    <ClCompile Include="sync\heterogeneous_computing\main.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="sync\multi_stream\DS_timer.cpp" />
     <ClCompile Include="thread\DS_timer.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -106,6 +113,7 @@
     <ClInclude Include="sync\atomic_operation\DS_timer.h" />
     <ClInclude Include="sync\cuda_event\DS_definitions.h" />
     <ClInclude Include="sync\cuda_event\DS_timer.h" />
+    <ClInclude Include="sync\heterogeneous_computing\KernelCall.h" />
     <ClInclude Include="sync\multi_stream\DS_definitions.h" />
     <ClInclude Include="sync\multi_stream\DS_timer.h" />
     <ClInclude Include="thread\DS_definitions.h" />
